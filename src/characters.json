@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "clicked" : false,
+        "name": "Jonathan Joestar",
+        "image": "images/apple.jpg"
+    }
+
+]
