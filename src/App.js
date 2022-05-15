@@ -29,10 +29,33 @@ class App extends Component {
 
 
 
+  shuffleArray = () => {
+    const shuffledArr = this.shuffle(this.state.characters);
+
+    this.setState({ shuffledArr })
+  }
 
 
 
+  shuffle = array => {
+    let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
 
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array
+  }
+
+
+  
 
 
 
@@ -45,7 +68,7 @@ class App extends Component {
         />
         <Rules />
   
-      <div>
+      
       {this.state.characters.map(character => (
           <CharacterCard 
           Clicked={this.state.Clicked}
@@ -58,14 +81,14 @@ class App extends Component {
         />
   
         ))}
-      </div>
+      
         
         
       </div>
      
     );
   }
-
+  
   
 }
 

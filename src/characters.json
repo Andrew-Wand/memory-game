@@ -4,6 +4,18 @@
         "clicked" : false,
         "name": "Jonathan Joestar",
         "image": "images/apple.jpg"
+    },
+    {
+        "id": 2,
+        "clicked" : false,
+        "name": "Joseph Joestar",
+        "image": "images/orange.jpg"
+    },
+    {
+        "id": 3,
+        "clicked" : false,
+        "name": "Jotaro Kujo",
+        "image": "images/orange.jpg"
     }
 
 ]
