@@ -96,18 +96,19 @@ class App extends Component {
 
 
   render() {
+    
     return (
-      <div className='wrapper'>
+      <div className='wrapper' >
         
         
-        <Header 
+        <Header  
           currentScore={this.state.currentScore}
           highScore={this.state.highScore}
         />
         <Rules />
 
       
-        <div className='card-container'>
+        <div className='card-container' >
         {this.state.characters.map(character => (
           <CharacterCard 
           Clicked={this.state.Clicked}
