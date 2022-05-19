@@ -25,6 +25,29 @@ class App extends Component {
   // const [isclicked, setIsClicked] = useState(Clicked: false);
 
 
+  handleClick = id => {
+    this.shuffleArray();
+    this.handleScore(id);
+    console.log(this.state.timesClicked);
+  }
+
+  handleScore = id => {
+    this.state.characters.forEach(element => {
+      if (id === element.id && element.clicked === false) {
+        element.clicked = true;
+        this.setState({ Clicked: false });
+        this.handleIncrement();
+      } else if (id === element.id && element.clicked === true) {
+        if (this.state.currentScore > this.state.highScore) {
+          this.setState({ highScore: this.state.currentScore });
+        }
+        this.setState({currentScore: 0});
+        this.setState({ Clicked: true });
+        this.state.characters.forEach(element => (element.clicked = false));
+        console.log(this.state.characters);
+      }
+    })
+  }
 
 
 
@@ -33,6 +56,10 @@ class App extends Component {
     const shuffledArr = this.shuffle(this.state.characters);
 
     this.setState({ shuffledArr })
+  }
+
+  handleIncrement = () => {
+    this.setState({ currentScore: this.state.currentScore + 1 });
   }
 
 
@@ -61,7 +88,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='wrapper'>
         <Header 
           currentScore={this.state.currentScore}
           highScore={this.state.highScore}
