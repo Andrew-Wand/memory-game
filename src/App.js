@@ -98,14 +98,17 @@ class App extends Component {
   render() {
     return (
       <div className='wrapper'>
+        
+        
         <Header 
           currentScore={this.state.currentScore}
           highScore={this.state.highScore}
         />
         <Rules />
-  
+
       
-      {this.state.characters.map(character => (
+        <div className='card-container'>
+        {this.state.characters.map(character => (
           <CharacterCard 
           Clicked={this.state.Clicked}
           handleClick={this.handleClick}
@@ -117,6 +120,11 @@ class App extends Component {
         />
   
         ))}
+        </div>
+       
+       
+      
+     
       
         
         

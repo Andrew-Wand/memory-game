@@ -1,4 +1,33 @@
 
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/* Header */
+
+
+/* Rules */
+.rules-container {
+  position: absolute;
+  width: 30%;
+  background-color: #999;
+  top: 50%;
+  font-size: 26px;
+  padding: 20px;
+  display: none;
+}
+
+
+
+
+
+/* Cards */
 .card {
   background: #fff;
   border: 5px solid #fff;
@@ -12,7 +41,6 @@
 }
 
 .card>.img-container {
-  height: 80%;
   overflow: hidden;
   text-align: center;
 }
@@ -30,8 +58,20 @@
 .wrapper {
   height: 100%;
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
 }
+
+.animate {
+  animation: shake 0.5s;
+}
+
+.card-container {
+  display: grid;
+ grid-template-columns:  repeat(6, 1fr);
+  position: absolute;
+  top: 25%;
+}
+
