@@ -29,6 +29,7 @@ class App extends Component {
     this.shuffleArray();
     this.handleScore(id);
     console.log(this.state.timesClicked);
+    this.endGame();
   }
 
   handleScore = id => {
@@ -80,6 +81,14 @@ class App extends Component {
 
     return array
   }
+
+    endGame = () => {
+      if (this.state.currentScore === 6) {
+        alert('game end!');
+      }
+    }
+
+    
 
 
   

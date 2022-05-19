@@ -3,19 +3,37 @@
         "id": 1,
         "clicked" : false,
         "name": "Jonathan Joestar",
-        "image": "images/apple.jpg"
+        "image": "images/jonathan.png"
     },
     {
         "id": 2,
         "clicked" : false,
         "name": "Joseph Joestar",
-        "image": "images/orange.jpg"
+        "image": "images/joseph.jpg"
     },
     {
         "id": 3,
         "clicked" : false,
         "name": "Jotaro Kujo",
-        "image": "images/orange.jpg"
+        "image": "images/jotaro.jpg"
+    },
+    {
+        "id": 4,
+        "clicked" : false,
+        "name": "Josuke Higashikata",
+        "image": "images/josuke.jpg"
+    },
+    {
+        "id": 5,
+        "clicked" : false,
+        "name": "Giorno Giovanna",
+        "image": "images/giorno.png"
+    },
+    {
+        "id": 6,
+        "clicked" : false,
+        "name": "Jolyne Cujoh",
+        "image": "images/jolyne.jpg"
     }
 
 ]
